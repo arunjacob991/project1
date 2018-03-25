@@ -1,0 +1,25 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server --mode development --content-base ./src/test.htm",
+    "build:prod": "webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "webpack-cli": "^2.0.13"
+  },
+  "devDependencies": {
+    "webpack": "^4.2.0",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
