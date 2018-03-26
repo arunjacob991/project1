@@ -14,4 +14,40 @@ module.exports = {
       }
     ]
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [{loader: 'style-loader'} , {loader:'css-loader'} ]
+      }
+    ]
+  }
+  module: {
+   rules: [
+     {
+       test: /\.(png|jpg|gif)$/,
+       use: [
+         {
+           loader: 'file-loader',
+           options: {}
+         }
+       ]
+     }
+   ]
+ }
+ module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }
+    ]
+  }
 };
