@@ -1,6 +1,10 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
-  entry: './src/test.js',
+  entry: './src/components/index.js',
   output: {
+    path: __dirname + '/dist/',
     filename: 'dist/bundle.js',
   },
   module: {
@@ -12,18 +16,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
-    ],
-  },
-  module: {
-    rules: [
       {
         test: /\.css$/,
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
-    ],
-  },
-  module: {
-    rules: [
       {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -33,10 +29,6 @@ module.exports = {
           },
         ],
       },
-    ],
-  },
-  module: {
-    rules: [
       {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -50,4 +42,7 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    contentBase: path.resolve('src/public'),
+  }
 };
